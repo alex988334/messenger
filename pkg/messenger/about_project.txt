@@ -1,0 +1,23 @@
+SERVER DESCRIPTION
+OS: Debian 12
+Platform: go 1.22.5
+Main protocol: WSS
+File d/u protocol: HTTPS
+Libraries used: 
+    filippo.io/edwards25519
+    golang.org/x/crypto
+    github.com/go-sql-driver/mysql
+    github.com/gorilla/websocket
+Data base server: MariaDB
+General: the hierarchy of the server architecture is represented by a server class, a connection hub, a client connection, a business logic layer, a data model layer, a database connection layer, a SQL model layer, and a business logic adapter to a SQL model.
+
+CLIENT DESCRIPTION
+OS: Android 7.0
+Platform: java
+Libraries used: 
+    org.java-websocket
+    com.google.code.gson
+    com.squareup.retrofit2:converter-gson
+    com.squareup.retrofit2:retrofit
+Data base local: not supported
+General: the structure is implemented using fragments, view models, binding; it is represented by an activity class, a chat business logic handler, a message buffer, a network flow with an implemented VSS client, an application settings handler (save/load).
